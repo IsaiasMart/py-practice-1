@@ -13,7 +13,7 @@ Exercise 1
 Create a Python program that counts the number of characters
 in the provided story (including spaces and punctuation).
 '''
-character_count = 0 # write your code here
+character_count = len(story) # write your code here
 print("Number of characters in the story:", character_count)
 
 # Numbers
@@ -23,13 +23,13 @@ Exercise 2:** Calculate the number of YEARS until 2045.
 Use the variable `year` to store the current year.
 '''
 year = 2023 # get current year
-years_left = 0 # write your code here
+years_left = 2045-year # write your code here
 print("Number of years left:", years_left)
 
 '''
 Exercise 3:** Calculate the number of DAYS until 2045.
 '''
-days_left = 0 # write your code here
+days_left = (2045*365)+(2045/4)-(2023*365)+(2023/4) # write your code here
 print("Number of days left:", days_left)
 
 # 3. Booleans
@@ -37,7 +37,7 @@ print("Number of days left:", days_left)
 '''
 Exercise 4:** Check if the word "IA" is includes in the story.
 '''
-ia_in_story = False # write your code here
+ia_in_story = "IA" in story # write your code here
 if (ia_in_story):
   print("The word 'IA' is in the story")
 else:
@@ -48,33 +48,36 @@ else:
 '''
 Exercise 5:** Create a list of the words in the story and print the first 10 words.
 '''
-words = [] # write your code here
+words = [story[0:story.index(" a ")]]# write your code here
 print("First 10 words in the story:", words)
 
 '''
 Exercise 6:** Create a list of the words in the story and print the last 10 words.
 '''
+words=story[story.index(" artificial, "):-1]
 print("Last 10 words in the story:", words)
 
 '''
 Exercise 7:** Create a list of the words in the story and print the words in the 10th to 20th position.
 '''
+story1=story.split(" ")
+words=[story1[9],story1[19]]
 print("Words in the 10th to 20th position:", words)
 
 '''
 Exercise 8:** Count the number of times the word "Javier" appears in the story.
 '''
-javier_count = 0 # write your code here
+javier_count = story.count("Javier") # write your code here
 print("Number of times the word 'Javier' appears in the story:", javier_count)
 
 '''
 Exercise 9:** Replace the word "Javier" with "Pepito" in the story.
 '''
-story2 = "" # write your code here
+story2 = story.replace("Javier","Pepito") # write your code here
 print("Story with 'Javier' replaced with 'Pepito':", story2)
 
 '''
 Exercise 10:** Reverse the order of the words in the story.
 '''
-story3 = "" # write your code here
+story3 = story[::-1]
 print("Story with words reversed:", story3)
